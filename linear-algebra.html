@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Linear Algebra</title>
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+    <body>
+        <h1>Linear Algebra</h1>
+        <p>
+            This will be the first of a series of posts on linear algebra from a geometrical point of view
+            with applications to computer graphics. The only prequisite will be some familiarity with vectors
+            and complex numbers.  There are a lot of applications of linear algebra, but graphics were chosen
+            because of the closeness to the visual ideas that I want to explain here. We will focus only on
+            linear algebra in two or three dimensions and develop as much of the subject as we can in that
+            setting first.  Be aware, though, that a lot of the power of linear algebra comes when we generalize
+            to n dimensions.
+        </p>
+        <p>
+            <strong>
+                Note: If you are already familiar with the dot product, pretend you have amnesia and forgot
+                about it.  We are going to reinvent it.
+            </strong>
+        </p>
+        <p>
+            We will begin with a practical problem.  Let's say we are going to write a CAD program or a computer
+            game where we need to display some 3-dimensional objects.  Also, let's suppose we want to lengths to
+            be displayed to scale, rather getting smaller as they recede in the distance.  Imagine Sim City or a
+            top-down game that takes place mostly close to a flat plane or some architectural design where a 10m
+            line in real life always needs to be represented by a 10cm line in the program.  We will not try to
+            build a production-grade product, but instead just try to solve the meat of the problem, so that we will
+            be forced to develop all the necessary mathematics.  We will lean towards "reinventing the wheel" because
+            our goal is understanding how this sort of program might work from first-principles, rather than creating a
+            functional product.
+        </p>
+        <p>
+            How can we begin such a daunting task?  One great strategy for turning complex problems into simpler ones
+            is to see if we can first solve a simpler version of the problem.  We could start with some simple 3-dimensional
+            shapes, such as a cube, pyramid, or tetrahedron, and figure out how to display those on our screen.  What we need
+            for our use case above is a so-called "orthographic projection".  The simplest type of orthographic projection
+            results from just "forgetting" one of the coordinates.  For example, the point (x, y, z) in 3-dimensional space
+            projects to the point (x, y) if we forget the last coordinate.  We need to be able to project to an arbitrary
+            plane if we want to do the projection in a dynamic way.  To make things, even simpler, let's try to figure out how
+            to project onto an arbitrary line or vector in two-dimensional space.  Again, we'll start with the easiest cases first.
+        </p>
+        <p>
+            Let's denote the projection of the vector w onto the vector v by P<sub>v</sub> w.  Note that we can rescale v without
+            affecting the result.
+        </p>
+        <p>
+            Exercise.  Let v = (1, 0), w = (0, 1).  Compute P<sub>v</sub> w, P<sub>w</sub> v, P<sub>v</sub> v, and P<sub>w</sub> w.
+        </p>
+        <p>
+            Exercise. Let u = (8, 7), v = (1, 0), and w = (0, 5).  Compute P<sub>w</sub> u.
+        </p>
+
+    </body>
+</html>
