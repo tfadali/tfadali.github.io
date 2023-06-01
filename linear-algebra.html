@@ -37,11 +37,19 @@
             is to see if we can first solve a simpler version of the problem.  We could start with some simple 3-dimensional
             shapes, such as a cube, pyramid, or tetrahedron, and figure out how to display those on our screen.  What we need
             for our use case above is a so-called "orthographic projection".  The simplest type of orthographic projection
-            results from just "forgetting" one of the coordinates.  For example, the point (x, y, z) in 3-dimensional space
-            projects to the point (x, y) if we forget the last coordinate.  We need to be able to project to an arbitrary
+            results from just "forgetting" one of the coordinates.  For example, the point (x, y) in two-dimensional space
+            projects to the point x if we forget the last coordinate or y if we forget the first coordinate.  This is
+            illustrated below.
+        </p>
+        <div id="iframe-container">
+            <iframe src="https://editor.p5js.org/tsfadali/full/d2u4mwFYL" width="100%" height="100%"></iframe>
+        </div>
+        <p>
+            We need to be able to project to an arbitrary
             plane if we want to do the projection in a dynamic way.  To make things, even simpler, let's try to figure out how
             to project onto an arbitrary line or vector in two-dimensional space.  Again, we'll start with the easiest cases first.
         </p>
+        <h2>Coordinate Projections of a vector</h2>
         <p>
             Let's denote the projection of the vector w onto the vector v by P<sub>v</sub> w.  Note that we can rescale v without
             affecting the result.
@@ -50,7 +58,13 @@
             Exercise.  Let v = (1, 0), w = (0, 1).  Compute P<sub>v</sub> w, P<sub>w</sub> v, P<sub>v</sub> v, and P<sub>w</sub> w.
         </p>
         <p>
-            Exercise. Let u = (8, 7), v = (1, 0), and w = (0, 5).  Compute P<sub>w</sub> u.
+            Exercise. Let u = (8, 7), v = (1, 0), and w = (0, 5).  Compute P<sub>v</sub> u and P<sub>w</sub> u.
+        </p>
+        <p>
+            These cases illustrate projection by forgetting coordinates.  With that warmup, let's tackle the next most
+            complicated case.  We've already seen how to project an arbirary vector to one like v = (1, 0).  Let's try to
+            to reverse this and figure out how to project a vector like  v = (1, 0) in the direction of another arbitrary
+            vector.
         </p>
 
     </body>

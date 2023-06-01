@@ -6,3 +6,9 @@ body {
 #main-text {
     padding: 2rem;
 }
+
+#iframe-container {
+    height: 30rem;
+    width: 30rem;
+    overflow: auto;
+}
